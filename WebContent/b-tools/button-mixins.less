@@ -1,0 +1,42 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 15-02-2018
+// DESCRIPTION: -- Define los estilo para los botones
+// AUTHOR: ------- earayaa (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+
+// Define las propiedades por defecto de los botones
+.button-main(){
+  .bel-reset();
+}
+
+.button-properties(@padding, @height){
+  text-align: center;
+  padding: @padding;
+  height: @height;
+  font-weight: @font-weight-m;
+  transition: .5s;
+}
+
+
+.button-size(@min-width, @max-width){
+  min-width: @min-width;
+  max-width: @max-width;
+}
+
+
+.button-typography(@font-family, @font-size){
+  font-family: @font-family;
+  font-size: @font-size;
+}
+
+.button-state(@backgrond, @color, @border, @box-shadow){
+  background: @backgrond;
+  color: @color;
+  border: @border;
+  -webkit-box-shadow: @box-shadow;
+  -moz-box-shadow: @box-shadow;
+  box-shadow: @box-shadow;
+}

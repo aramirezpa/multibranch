@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>B-lue Demo</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/vochy023/b-lue/master/bel-main-scripts.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/vochy023/b-lue/master/zebra_datepicker.min.js"></script>
+	<link rel="stylesheet" href="g-libreries/fonts/1704-PLVMUK.css">
+<link rel="stylesheet" href="bel-main-style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="resources/bel-js/bel-main-scripts.js"></script>
+</head>
+<body>
+
+	<style>
+.spanLeft {
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 9px;
+}
+
+.inputSearch {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.spanRight {
+	margin-left: -28px;
+}
+
+.spanRight:hover {
+	background-color: red;
+    border-radius: 50%;
+    color:white;
+}
+</style>
+
+	<style>
+.class-color {
+	background: #e4002b;
+	text-align: center;
+}
+
+.grid {
+	text-align: center;
+	height: 4000px;
+	background: white;
+	background: lightgray;
+	font-size: 22px;
+	color: gray;
+}
+</style>
+
+
+
+	<div class="bel-grid-container">
+		
+
+		<br> <br> <br>
+		<div class="bel-grid-row">
+			<div class="bel-grid-col-12">
+				<span class="bel-typography-label bel-icon-search-xs bel-search-icon-position"
+					style=""></span> <input onkeyup="belSearchByInput(this)"
+					id="mySearchBoxId"
+					class="bel-input bel-input-m bel-input-default bel-search-state"
+					type="text" name="" value="" placeholder="Placeholder">
+<ul tabindex="1" id="mySelect6" class="bel-option-list bel-option-list-l">        
+         <li class="bel-option-disabled" value="222" >Categoria 1</li>
+          <li class="bel-option" value="1" onclick="updateBelSelect('mySelect6', 'myId6', this.innerHTML, this);">Opcion 1</li>
+         <li class="bel-option" value="2" onclick="updateBelSelect('mySelect6', 'myId6', this.innerHTML, this);">Opcion 2</li>
+        <li class="bel-option-disabled" value="222" >Categoria 2 </li>
+         <li class="bel-option" value="2" onclick="updateBelSelect('mySelect6', 'myId6', this.innerHTML, this);">Opcion 3</li>
+          <li class="bel-option" value="1" onclick="updateBelSelect('mySelect6', 'myId6', this.innerHTML, this);">Opcion 4</li>
+      </ul>					<span
+					onclick="belClearSearchBox('mySearchBoxId');"
+					class="bel-typography-label bel-icon-error-xxs spanRight"></span>
+			</div>
+		</div>
+
+	
+
+
+
+
+
+	</div>
+	<!-- cierra el grid -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<script>
+		//search
+		function belClearSearchBox(searchBoxId) {
+			$("#" + searchBoxId).val("");
+		}
+
+		function belSearchByInput(item) {
+			alert($(item).val());
+		}
+
+		//input
+		$(".bel-input-non-editable").prop("readonly", true);
+
+		$(".bel-input").on('click', function() {
+			if (!$(this).hasClass('bel-input-error')) {
+				$(this).addClass('bel-input-edit');
+			}
+			if ($(this).hasClass('bel-input-non-editable')) {
+				$(this).removeClass('bel-input-edit');
+			}
+		});
+
+		$('.bel-input').blur(function() {
+			$(this).removeClass('bel-input-edit');
+			$(this).addClass('bel-input-filled');
+		});
+
+		//textarea
+
+		$(".bel-textarea").on('click', function() {
+			if (!$(this).hasClass('bel-textarea-error')) {
+				$(this).addClass('bel-textarea-edit');
+			}
+		});
+
+		$('.bel-textarea').blur(function() {
+			$(this).removeClass('bel-textarea-edit');
+		});
+
+		var tx = document.getElementsByTagName('textarea');
+		for (var i = 0; i < tx.length; i++) {
+			tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight)
+					+ 'px;');
+			tx[i].addEventListener("input", OnInput, false);
+		}
+
+		function OnInput(e) {
+			this.style.height = 'auto';
+			this.style.height = (this.scrollHeight) + 'px';
+		}
+
+		//select
+		function updateBelSelect(idList, idLabel, optionText, element) {
+			document.getElementById(idLabel).innerHTML = optionText;
+			$("#" + idLabel).addClass("bel-select-filled");
+			$("#" + idList).removeClass("bel-display-list");
+			$("#" + idLabel).removeClass('bel-select-open-icon');
+			$("#" + idLabel).addClass('bel-select-close-icon');
+			var allOptions = $("#" + idList).children('li');
+			allOptions.removeClass('selected');
+			$(element).addClass('selected');
+		}
+
+		function displayBelOption(idList, idLabel) {
+			if ($('#' + idLabel).hasClass('bel-select-open-icon')) {
+				$("#" + idLabel).removeClass('bel-select-open-icon');
+				$("#" + idLabel).addClass('bel-select-close-icon');
+				$("#" + idList).removeClass("bel-display-list");
+			} else {
+				var allOptions = $(".bel-option-list");
+				allOptions.removeClass('bel-display-list');
+
+				var allSelectLabels = $(".bel-select");
+				allSelectLabels.removeClass('bel-select-open-icon');
+				allSelectLabels.addClass('bel-select-close-icon');
+
+				if (!$('#' + idLabel).hasClass('bel-select-disabled')) {
+					var allOptions = $("#" + idList).children('li');
+					allOptions.removeClass('selected');
+					$('#' + idList).toggleClass('bel-display-list');
+					$("#" + idLabel).addClass('bel-select-open-icon');
+				}
+			}
+		}
+
+		function getBelSelectedOption(id) {
+			alert($("#" + id).find(".selected").val());
+		}
+	</script>
+</body>
+</html>

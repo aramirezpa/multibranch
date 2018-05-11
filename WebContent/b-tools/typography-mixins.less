@@ -1,0 +1,48 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 13-02-2018
+// DESCRIPTION: -- Define los estilo para la tipografia
+// AUTHOR: ------- aarroyo, kugaldes, (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+// function to mix in main styles of typography. this execute bel-reset to reset style inherited from other style sheets
+// version 1.0
+.bel-typography-main(@font-family: @font-style-primary, @color: @color-extra-dark-gray, @font-size: @font-size-m){
+	 .bel-reset();
+	 font-family: @font-family;
+	 color: @color;
+	 font-size: @font-size;	  
+}
+// function to mix in the styles of typography with 3 parameters
+// version 1.0
+.bel-typography-default(@font-family: @font-style-primary, @color: @color-black, @font-size: @font-size-xxl){
+	font-family: @font-family;
+	color: @color;
+	font-size: @font-size; 
+}
+// function to mix in the styles of typography with 3 parameters
+// version 1.0
+.bel-typography-l(@font-family: @font-style-primary, @color: @color-black, @font-size: @font-size-xxl){
+	font-weight: @font-weight-m;
+	.bel-typography-default(@font-family, @color, @font-size);
+}
+// function to mix in the styles of typography with 4 parameters
+// version 1.0
+.bel-typography-secondary(@font-family: @font-style-primary, @color: @color-extra-dark-gray, @font-size: @font-size-m, @line-height: @line-height-m){		
+	line-height: @line-height;
+	.bel-typography-default(@font-family, @color, @font-size);
+}
+// function to mix in the styles of a element h
+// version 1.0
+.bel-typography-h(@font-family: @font-style-primary, @color: @color-black, @font-size: @font-size-xxl, @font-weight: @font-weight-s){
+	font-weight: @font-weight;
+	.bel-typography-default(@font-family, @color, @font-size);
+}
+// function to mix in the styles of a element a
+// version 1.0
+.bel-typography-a(@font-family: @font-style-primary, @color: @color-black, @font-size: @font-size-xxl, @text-decoration: @reset-text-decoration){
+	cursor: pointer;
+	text-decoration: @reset-text-decoration;	
+	.bel-typography-default(@font-family, @color, @font-size);
+}

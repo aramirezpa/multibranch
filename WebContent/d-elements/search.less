@@ -1,0 +1,67 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 128-04-2018
+// DESCRIPTION: -- Define los estilo para el buscador
+// AUTHOR: ------- aramirez (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+@box-shadow-search: 0px 4px 35px -18px black;
+
+.bel-search__input {
+	-webkit-box-shadow: @box-shadow-search;
+	-moz-box-shadow: @box-shadow-search;
+	box-shadow: @box-shadow-search;
+	padding-left: 35px;
+	padding-right: 30px;
+}
+
+.bel-search-icon-position {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 9px;
+}
+
+.bel-search__results-item_category {
+	.bel-reset ();
+	.bel-typography-h3 ();
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 30px;
+}
+
+.bel-search__results {
+	pointer-events: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: @space-m;
+	padding-bottom: @space-m;
+}
+
+.bel-search__results-item-icon {
+	padding-top: @space-m;
+	padding-bottom: @space-m;
+}
+
+.bel-search__results-list {
+	width: 100%;
+	-webkit-box-shadow: @box-shadow-search;
+	-moz-box-shadow: @box-shadow-search;
+	box-shadow: @box-shadow-search;
+	padding: 10px 10px 10px 10px;
+	box-sizing: border-box;
+}
+
+.bel-search__results-item {
+	.bel-typography-p ();
+	text-decoration: none;
+}
+
+.bel-search__item {
+	padding: 10px 10px 15px 10px;
+}
+
+.bel-search__item:hover {
+	background: @color-backgrond-gray;
+}
+

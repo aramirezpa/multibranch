@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+<link rel="stylesheet" href="https://rawgit.com/vochy023/b-lue/master/bel-main-style.css" type="text/css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/vochy023/b-lue/master/bel-main-scripts.js"></script>
+<link rel="StyleSheet" href="https://rawgit.com/vochy023/b-lue/master/bel-main-style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="g-libreries/fonts/1704-PLVMUK.css">
+<link rel="stylesheet" href="bel-main-style.css">
+
+</head>
+<script>
+    $(document).ready(function(){
+      startAmimationTimer();});
+  </script>
+<body>
+<!--
+
+<style>
+.class-color {
+	background: #e4002b;
+	text-align: center;
+}
+
+.grid {
+	text-align: center;
+	height: 1000px;
+	background: white;
+	background: lightgray;
+	font-size: 22px;
+	color: gray;
+}
+.gridContainer{
+	    margin: auto;
+    width: 100%;
+    max-width: 948px;
+    height: auto;
+    position: absolute;
+}
+
+</style>
+
+	<div class="gridContainer">
+		<div class="bel-grid-row" style="z-index: -1">
+			<div class="bel-col-1 grid">1</div>
+			<div class="bel-col-1 grid">2</div>
+			<div class="bel-col-1 grid">3</div>
+			<div class="bel-col-1 grid">4</div>
+			<div class="bel-col-1 grid">5</div>
+			<div class="bel-col-1 grid">6</div>
+			<div class="bel-col-1 grid">7</div>
+			<div class="bel-col-1 grid">8</div>
+			<div class="bel-col-1 grid">9</div>
+			<div class="bel-col-1 grid">10</div>
+			<div class="bel-col-1 grid">11</div>
+			<div class="bel-col-1 grid">12</div>
+		</div>
+	</div>
+-->
+	<div class="bel-grid-container" style="border: 1px solid black;">
+		<br><br><br><br><br><br>
+		<div class="bel-grid-row">
+		  <div class="bel-col-6 bel-btn-group">
+		    <button class="bel-btn bel-btn-default bel-btn-default-active">Cancelar</button>
+		    <button class="bel-btn bel-btn-primary bel-btn-primary-active">Aceptar</button>
+		  </div>
+		</div>
+		<div class="bel-grid-row">
+		  <div class="bel-col-12 bel-btn-group">
+		    <button class="bel-btn bel-btn-default bel-btn-default-active">Botón 1</button>
+		    <button class="bel-btn bel-btn-default bel-btn-default-active">Botón 2</button>
+		  </div>
+		</div>
+		<div class="bel-grid-row">
+			<div class="bel-col-12 bel-btn-group">
+				 <button class="bel-btn bel-btn-primary bel-btn-primary-active">Aceptar</button>
+			 
+			  <button class="bel-btn bel-btn-default bel-btn-default-active">Cancelar</button>
+			  <button class="bel-btn bel-btn-secondary bel-btn-secondary-active">Siguiente</button>
+			</div>
+		</div>
+		<div class="bel-grid-row">
+			<div class="bel-col-12">
+				<button class="bel-btn bel-btn-tertiary bel-btn-tertiary-active bel-btn-tertiary-icon"></button>
+				 <button class="bel-btn bel-btn-tertiary bel-btn-tertiary-disabled bel-btn-tertiary-icon"></button>				 
+			</div>
+		</div>
+		<div class="bel-grid-row">
+			<div class="bel-col-3">
+				<button class="bel-btn bel-btn-quaternary bel-btn-quaternary-active">IBAN</button>
+			</div>
+		</div>
+		
+<div class="bel-grid-row">
+<div class="bel-grid-col-3">
+<div class="bel-timer-cont">
+<label class="bel-timer-cont__numbers"
+id="belSeconds"></label>
+<svg class="bel-timer-cont__timer"
+xmlns="http://www.w3.org/2000/svg"> 
+                <g> 
+                
+                    <circle cy="25" cx="25" r="20"
+class="bel-timer-cont__shadow" /> 
+       
+                    <circle cy="25" cx="25" r="20"
+class=" bel-timer-cont__circle" /> 
+                 </g> 
+              </svg>
+<div class="bel-timer-cont__seconds-label">
+<label class="bel-timer-cont__label">Segundos</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+  <br><br><br><br>
+
+
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		//input
+		$(".bel-input-non-editable").prop("readonly", true);
+
+		$(".bel-input").on('click', function() {
+			if (!$(this).hasClass('bel-input-error')) {
+				$(this).addClass('bel-input-edit');
+			}
+			if ($(this).hasClass('bel-input-non-editable')) {
+				$(this).removeClass('bel-input-edit');
+			}
+		});
+
+		$('.bel-input').blur(function() {
+			$(this).removeClass('bel-input-edit');
+		});
+
+		//textarea
+
+		$(".bel-textarea").on('click', function() {
+			if (!$(this).hasClass('bel-textarea-error')) {
+				$(this).addClass('bel-textarea-edit');
+			}
+		});
+
+		$('.bel-textarea').blur(function() {
+			$(this).removeClass('bel-textarea-edit');
+		});
+
+		var tx = document.getElementsByTagName('textarea');
+		for (var i = 0; i < tx.length; i++) {
+			tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight)
+					+ 'px;');
+			tx[i].addEventListener("input", OnInput, false);
+		}
+
+		function OnInput(e) {
+			this.style.height = 'auto';
+			this.style.height = (this.scrollHeight) + 'px';
+		}
+
+		//select
+		function updateBelSelect(idList, idLabel, optionText, element) {
+			document.getElementById(idLabel).innerHTML = optionText;
+			$("#" + idLabel).addClass("bel-select-filled");
+			$("#" + idList).removeClass("bel-display-list");
+			$("#" + idLabel).removeClass('bel-select-open-icon');
+			$("#" + idLabel).addClass('bel-select-close-icon');
+			var allOptions = $("#" + idList).children('li');
+			allOptions.removeClass('selected');
+			$(element).addClass('selected');
+		}
+
+		function displayBelOption(idList, idLabel) {
+			if ($('#' + idLabel).hasClass('bel-select-open-icon')) {
+				$("#" + idLabel).removeClass('bel-select-open-icon');
+				$("#" + idLabel).addClass('bel-select-close-icon');
+				$("#" + idList).removeClass("bel-display-list");
+			} else {
+				var allOptions = $(".bel-option-list");
+				allOptions.removeClass('bel-display-list');
+
+				var allSelectLabels = $(".bel-select");
+				allSelectLabels.removeClass('bel-select-open-icon');
+				allSelectLabels.addClass('bel-select-close-icon');
+
+				if (!$('#' + idLabel).hasClass('bel-select-disabled')) {
+					var allOptions = $("#" + idList).children('li');
+					allOptions.removeClass('selected');
+					$('#' + idList).toggleClass('bel-display-list');
+					$("#" + idLabel).addClass('bel-select-open-icon');
+				}
+			}
+		}
+
+		function getBelSelectedOption(id) {
+			alert($("#" + id).find(".selected").val());
+		}
+	</script>
+</body>
+</html>

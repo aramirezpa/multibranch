@@ -1,0 +1,29 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Define los estilo para los radio buttons
+// AUTHOR: ------- nruizz,ecalderon (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+// Define las propiedades por defecto de los radio buttons
+
+
+.slider-state(@background,@content: none, @top:0, @bottom:0,@left:0, @border:@border-radius-s){
+  position: absolute;
+  cursor: pointer;
+  top: @top;
+  left: @left;
+  right: 0;
+  bottom:  @bottom;
+  background-color: @background;
+  -webkit-transition: .4s;
+  transition: .4s;
+   content:@content;
+   border-radius: 10%;
+   display: inline-block;
+   vertical-align: middle;
+}
+.slider-transform(@translateX){
+	.bel-slider-element-transform(@translateX);
+}

@@ -1,0 +1,246 @@
+// REVISION ----- 1.0
+// SP: ---------- CRI-025171
+// DATE: --------- 07-02-2018
+// DESCRIPTION: -- Define las variables (settings) utilizadas dentro de la estructura del proyecto
+// AUTHOR: ------- avegago, earayaa, ecalderon, jarroyoa, jcastillov, nruiz, kugaldes (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+// resets
+@reset-margin: 0;
+@reset-padding: 0;
+@reset-border: 0;
+@reset-text-transform: initial;
+@reset-text-decoration: initial;
+
+//resolutions
+@res-main: 1366px;
+@res-side-menu: 233px;
+@res-side-menu-collapse: 57px;
+@res-content: 947px;
+@res-breakpoint: 1200px;
+
+//grid
+@grid-column-width:59;
+@grid-number-columns:12;
+@grid-gutter:20;
+@grid-width-fixed: (@grid-number-columns * @grid-column-width)+(@grid-number-columns*@grid-gutter)* 1px;
+@grid-width-total: @grid-width-fixed;
+
+//space system
+@space-xxs: 1px;
+@space-xs: 5px;
+@space-s: 10px;
+@space-m: 15px;
+@space-l: 25px;
+@space-xl: 50px;
+
+//brand colors
+@color-bac-red: #E4002B;
+@color-light-red: #C8102F;
+@color-medium-red: #A6192E;
+@color-dark-red: #76232F;
+
+//neutral colors
+@color-backgrond-gray: #F1F1F2;	
+@color-light-gray: #E6E6E6;
+@color-medium-gray: #BEBEBE;
+@color-dark-gray: #6D6E71;
+@color-extra-dark-gray: #4D4D4F;
+@color-black: #000000;
+
+//utility colors
+@color-light-purple: #B33E96;
+@color-medium-purple: #91287F;
+@color-dark-purple: #701A53;
+@color-light-green: #6EBF5D;
+@color-medium-green: #2A9446;
+@color-dark-green: #007147;
+@color-light-blue: #1075BB;
+@color-medium-blue: #003594;
+@color-dark-blue: #001A70;
+@color-light-orange: #F5881F;
+@color-medium-orange: #CD5527;
+@color-dark-orange: #AD1F2C;
+
+
+//others colors
+@color-btn-hover: #0A609C;
+@color-btn-disabled: #9A9A9A;
+@color-tab-secondary: #DDDDDD;
+@color-white: #FFFFFF;
+@color-none: none;
+
+// fonts
+@font-style-default: Arial;
+@font-style-primary: Graphik;
+@font-style-secondary: Graphik;
+@font-style-icons: bluecredomatic-iconset;
+
+
+// font-size
+@font-size-xxl: 24px;
+@font-size-xl: 20px;
+@font-size-l: 16px;
+@font-size-m: 14px;
+@font-size-s: 13px;
+@font-size-xs: 12px;
+@font-size-xxs: 8px;
+
+@font-size-img-xxl: 36px;
+@font-size-img-xl: 30px;
+@font-size-img-l: 26px;
+@font-size-img-m: 20px;
+@font-size-img-s: 16px;
+@font-size-img-xs: 14px;
+@font-size-img-xxs: 10px;
+
+// font-weight
+@font-weight-l: 600;
+@font-weight-m: 500;
+@font-weight-s: 400;
+
+// line-height
+@line-height-s: 1;
+@line-height-m: 1.5;
+
+//check control
+@check-controls-size: 16px;
+@toggle-switch-width: 28;
+
+//Border-radius
+@border-radius-xs: 1px;
+@border-radius-s: 2px;
+@border-radius-m: 3px;
+@border-radius-l: 5px;
+@border-radius-xl: 10px;
+@border-radius-xxl: 25px;
+
+//borders
+@border-style-default: solid;
+@border-width-s: 1px;
+@border-width-m: 2px;
+@border-width-l: 3px;
+
+//form-elements size
+@form-element-size-xs: 68px;
+@form-element-size-s: 136px;
+@form-element-size-m: 268px;
+@form-element-size-l: 470px;
+@form-element-size-xl: 740px;
+
+//Icon
+//Descripcion: Contenido del @icon de notificaciones para mensajes de alerta
+@icon-warning: "\62";
+// Contenido del @icon de notificaciones para mensajes de informacion
+@icon-info: "\61";
+// Contenido del @icon de notificaciones para mensajes exitosos
+@icon-success: "\63";
+// Contenido del @icon de notificaciones para mensajes de error
+@icon-error: "\64";
+// Contenido del @icon de notificaciones para mensajes de conexion a internet
+@icon-wireless: "\65";
+// Contenido del @icon de regresar
+@icon-back: "\66";
+// Contenido del @icon de mas
+@icon-more: "\67";
+// Contenido del @icon de transferecnias
+@icon-transfer: "\68";
+// Contenido del @icon de pagos
+@icon-payments: "\69";
+// Contenido del @icon "more" en menu principal
+@icon-more-bar: "\6a";
+// Contenido del @icon de inicio
+@icon-home: "\6b";
+// Contenido del @icon de apps en pantalla de login
+@icon-apps: "\6c";
+// Contenido del @icon de salida
+@icon-exit: "\6d";
+// Contenido del @icon
+@icon-arrow-right: "\6e";
+// Contenido del @icono de un item de lista
+@icon-timeline: "\6f";
+// Contenido del @icon tarjeta de credito
+@icon-credit-card: "\70";
+// Contenido del @icon cuenta
+@icon-acccount: "\71";
+// contenido del @icon de touchId en pantalla proactiva
+@icon-touchID: "\72";
+// contenido del @icon de editar en pantalla proactiva
+@icon-edit: "\73";
+//contenido del @icon de arrow abajo en pantalla proactiva
+@icon-arrow-down: "\74";
+// @icono de recibo
+@icon-receipt: "\75";
+// @icono de recargar vista
+@icon-reload: "\76";
+// APARTAMENTOS Y CONDOMINIOS
+@icon-apartments: "\77";
+// ASOCIACIONES
+@icon-partnerships: "\78";
+// TELEVISIoN
+@icon-television: "\79";
+// CLUBES
+@icon-clubs: "\7a";
+// CUOTAS & CREDITOS
+@icon-quotasandcredits: "\41";
+// INSTITUCIONES EDUCATIVAS
+@icon-education: "\42";
+// ESCUELAS & COLEGIOS
+@icon-schoolsandcolleges: "\43";
+// FUNDACIONES & DONACIONES
+@icon-foundationsanddonations: "\44";
+// FUNERARIAS
+@icon-funerary: "\45";
+// GOBIERNO & MUNICIPALIDADES
+@icon-government: "\46";
+// HOTELES
+@icon-hotels: "\47";
+// TRANSPORTE
+@icon-transport: "\48";
+// SEGURIDAD
+@icon-security: "\49";
+// SERVICIOS PUBLICOS
+@icon-light: "\4b";
+// INDUSTRIA
+@icon-industry: "\4c";
+// IMPUESTOS
+@icon-taxes: "\4d";
+// BUSQUEDA
+@icon-search: "\51";
+// CATEGORIAS OBJETIVOS
+@icon-car: "\4e";
+@icon-others: "\4f";
+@icon-christmas: "\50";
+@icon-holidays: "\52";
+@icon-study: "\53";
+//FLECHA HACIA ARRIBA
+@icon-arrow-up: "\55";
+//CALENDAR
+@icon-calendar: "\56";
+//ICONO INFOTIP
+@icon-infotip: "\33";
+//ICONO DESCARGAR
+@icon-download: "\30";
+//ICONO DESCARGAR
+@icon-email: "\31";
+//ICONO IMPRIMIR
+@icon-print: "\58";
+
+
+// elements height (input, button)
+@element-height-default: 40px;
+
+//ancho segun columnas por talla
+@column-width-xs: 1;
+@column-width-s: 2;
+@column-width-m: 4;
+@column-width-l: 6;
+@column-width-xl: 10;
+
+//TAMAÑOS
+@xs: 68px;
+@s: 136px;
+@m: 268px;
+@l: 470px;
+@xl: 740px;

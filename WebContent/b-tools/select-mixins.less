@@ -1,0 +1,59 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 16-02-2018
+// DESCRIPTION: -- Define los mixins para el combo de seleccion
+// AUTHOR: ------- jcastillov (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-select-main(@border-style: solid, @border-width: 1px, @border-color: #000000, @padding: 1px){
+	.bel-reset();
+	.bel-element-state(@color-white, @color-extra-dark-gray, @border-width-s, @border-style, @border-color);
+	.bel-element-font(@font-style-primary, @font-size-m);
+	padding: @padding @padding 0px @padding;
+	align-items: center;
+	box-sizing: border-box;
+  	display: block;
+	height: 40px;
+}
+
+
+
+.bel-select-state(@color: #FFFFFF, @background: #000000){
+	color: @color;
+	background: @background;
+}
+
+.bel-select-border-buttom(@border-style: solid, @border-width: 1px, @border-color: #000000){
+	border-bottom: @border-width @border-style @border-color;
+}
+
+.bel-option-main(@border-style: solid, @border-width: 1px, @border-color: #000000, @padding: 1px, @color: #000){
+	.bel-reset();
+	.bel-element-font(@font-style-primary, @font-size-m);
+	padding: @padding;
+	border-left: @border-width @border-style @border-color;
+	border-right: @border-width @border-style @border-color;	
+	align-items: center;
+	box-sizing: border-box;
+  	display: block;
+  	background:@color-white;
+  	color:@color;
+  	width: 100%
+  }
+  	
+ 
+
+.bel-option-list-main(){
+  list-style: none;
+  padding: 0;
+  position:absolute;
+  display: none;
+  z-index:10;
+  max-height:190px;/*The important part*/
+  overflow-y:auto;/*Also...*/
+  overflow-x:hidden;/*And the end of the important part*/ 
+  border-bottom: @border-width-s @border-style-default @color-medium-gray;
+}
+
+

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="g-libreries/fonts/1704-PLVMUK.css">
+    <link rel="stylesheet" href="bel-main-style.css">
+
+     <script src="g-libreries/jquery/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="resources/bel-js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="resources/bel-js/bel-main-scripts.js"></script>
+
+
+
+    <script type="text/javascript" src="g-libreries/zebra/js/zebra_datepicker.min.js"></script>
+
+    <script>
+   messagesStep = [];
+   messagesStep.push('uno');
+   messagesStep.push('dos');
+   messagesStep.push('tres');
+   messagesStep.push('cuatro');
+   messagesStep.push('cinco');
+   messagesStep.push('seis');
+   $(document).ready(function(){
+      $('#idProcess').belCreateWizardProcessStep(5, messagesStep, 2);
+   });
+</script>
+
+
+
+
+  </head>
+  <body>
+
+
+
+  <div class="bel-grid-container">
+
+
+     <button class="bel-btn bel-btn-primary bel-btn-primary-active">Aceptar</button>
+
+    <div class="bel-grid-row">
+
+      <div class="bel-col-3">
+        <div class="bel-download-list-container">
+          <button class="bel-icon-email bel-select-download-list">Enviar notificación</button>
+        </div>
+      </div>
+
+      <div class="bel-col-2">
+        <div class="bel-space-right-xs bel-download-list-container">
+
+           <button id="myId1" class="bel-icon-download bel-select-download-list" onclick="displayDownloadOption('myDownload1', 'myId1');">Descargar</button>
+           <ul id="myDownload1" class="bel-download-option-list">
+             <div id="downloadOptions" class="bel-download-list">
+               <div class="bel-download-triangle"></div>
+             </div>
+             <li class="bel-option" value="1" onclick="">Opción 1</li>
+             <li class="bel-option" value="2" onclick="">Opción 2</li>
+             <li class="bel-option" value="3" onclick="">Opción 3</li>
+           </ul>
+         </div>
+      </div>
+
+      <div class="bel-col-2">
+        <div class="bel-space-right-xs bel-download-list-container">
+           <button id="myId1" class="bel-icon-print bel-select-download-list">Imprimir</button>
+         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script type="text/javascript" src="resources/bel-js/bel-main-scripts.js"></script>
+  </body>
+</html>

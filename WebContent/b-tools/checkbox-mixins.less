@@ -1,0 +1,21 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 12-02-2018
+// DESCRIPTION: -- Define los estilo para los radio buttons
+// AUTHOR: ------- aramirez, jcastrom (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.checkbox-button-main() {
+	content: "";
+    height: @check-controls-size;
+    width: @check-controls-size;
+    display: inline-block;
+	margin-right: @space-m;
+    vertical-align: middle;
+}
+
+.checkbox-button-state(@background, @border){
+    border: @border;
+    background: @background;
+}

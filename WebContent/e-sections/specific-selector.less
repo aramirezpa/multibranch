@@ -1,0 +1,168 @@
+// DatePicker ------------------------------------------------------------------
+.Zebra_DatePicker .dp_footer {
+    margin-top: 5px;
+}
+
+.Zebra_DatePicker .dp_header {
+    margin-bottom: 5px;
+}
+
+.Zebra_DatePicker .dp_icon {
+    height: 16px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.Zebra_DatePicker.dp_hidden {
+    display: none;
+}
+
+button.Zebra_DatePicker_Icon.Zebra_DatePicker_Icon_Disabled {
+    background-position: center -32px;
+    cursor: default;
+}
+
+.Zebra_DatePicker .dp_actions td {
+    border-radius: 4px;
+}
+
+.Zebra_DatePicker .dp_daypicker th {
+    cursor: text;
+    font-weight: bold;
+}
+
+.Zebra_DatePicker .dp_monthpicker td,
+.Zebra_DatePicker .dp_yearpicker td,
+.Zebra_DatePicker .dp_timepicker td {
+    width: 33.3333%;
+    vertical-align: middle;
+}
+
+.Zebra_DatePicker .dp_time_separator div {
+    position: relative;
+}
+
+// Radio button checked --------------------------------------------------------
+.radio-button-input:checked + label::before {
+    .radio-button-state(@color-medium-green, @border-width-s, @border-style-default, @color-medium-green);
+}
+// Slider checked --------------------------------------------------------------
+input:checked + .bel-slider {
+  background-color: @color-medium-green;
+}
+
+input:checked + .bel-slider::before {
+  .slider-transform(93%);
+}
+// checkbox checked ------------------------------------------------------------
+.checbox-button-input {
+  &:checked {
+    + label {
+      &::before {
+    .checkbox-button-state(@color-medium-green, @border-width-s @border-style-default @color-medium-green);
+		font-family: bluecredomatic-iconset;
+    content:  @icon-success;
+      }
+    }
+  }
+}
+// Select ----------------------------------------------------------------------
+li.option:hover > label {
+  background: rgba(255, 255, 255, .7);
+  color: #000;
+}
+
+// DatePicker ------------------------------------------------------------------
+.Zebra_DatePicker .dp_time_separator div:after {
+    content: ":";
+    color: #222;
+    left: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+// tooltip ---------------------------------------------------------------------
+.bel-tooltip:hover .bel-tooltip-text,
+.bel-tooltip:hover .bel-tooltip-text-dowm {
+	visibility: visible;
+  transition-delay: 0.3s;
+  animation-name: opacityAnimation;
+	animation-duration: 1s;
+  opacity: 1;
+}
+
+@keyframes opacityAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+// DatePicker ------------------------------------------------------------------
+
+.Zebra_DatePicker .dp_actions .dp_caption {
+    font-weight: bold;
+    width: 100%;
+}
+
+.Zebra_DatePicker .dp_actions .dp_previous,
+.Zebra_DatePicker .dp_actions .dp_next {
+    padding: 0 10px;
+}
+
+.Zebra_DatePicker .dp_actions .dp_hover {
+    background-color: #dedede;
+}
+
+.Zebra_DatePicker .dp_body .dp_not_in_month {
+    color: #666;
+}
+
+.Zebra_DatePicker .dp_body .dp_current {
+    color: #000;
+    font-weight: 600;
+}
+
+
+.Zebra_DatePicker .dp_body .dp_selected {
+    background: #2C9646;
+    color: #fff;
+}
+
+.Zebra_DatePicker .dp_body .dp_disabled {
+    color: #bbbbbb;
+    cursor: text;
+}
+
+.Zebra_DatePicker .dp_body .dp_hover {
+    background: #dedede;
+}
+
+.Zebra_DatePicker .dp_timepicker .dp_disabled {
+    border: none;
+    color: #222;
+    font-weight: bold;
+}
+
+.Zebra_DatePicker .dp_footer .dp_icon {
+    width: 50%;
+}
+
+.Zebra_DatePicker .dp_icon.dp_confirm {
+    background-position: center -123px;
+}
+
+.Zebra_DatePicker .dp_icon.dp_view_toggler {
+    background-position: center -91px;
+}
+
+
+.Zebra_DatePicker .dp_body .dp_hover.dp_time_control {
+    background-color: #dedede;
+}
+
+.Zebra_DatePicker .dp_body .dp_disabled.dp_current {
+    color: #b4d5e6;
+}
+
+.Zebra_DatePicker .dp_icon.dp_view_toggler.dp_calendar {
+    background-position: center -59px;
+}

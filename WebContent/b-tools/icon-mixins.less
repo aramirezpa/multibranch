@@ -1,0 +1,34 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Define los estilo para los iconos
+// AUTHOR: ------- aarroyo, kugaldes, (1.0)
+// WORKTEAM: ----- Anonymous-Codebreakers (1.0)
+// version 1.0
+.bel-icon( @font-size: @font-size-img-xs){
+	  font-size: @font-size;
+	  .bel-icon-main(@line-height-m, @space-xs, @space-xs, middle);
+}
+
+.bel-icon-main(@line-height: @line-height-m, @space-left: @space-xs, @space-right: @space-xs, @vertical-align: middle){
+	font-family: @font-style-icons;
+	line-height: @line-height;
+    margin-left: @space-left;
+    margin-right: @space-right;
+	vertical-align: @vertical-align;
+}
+
+.bel-icon-select( @font-size: @font-size-img-xs){
+	  font-size: @font-size;
+	  margin-top:0px;
+      float:right;
+	  .bel-icon-main(@line-height-m, 0px, -3px, middle);
+}
+
+.bel-icon-color(@color: @color-bac-red){
+	color: @color;
+}
+.bel-icon-size(@size){
+	width: @size;
+    height: @size;
+}

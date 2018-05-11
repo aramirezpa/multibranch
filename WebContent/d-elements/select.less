@@ -1,0 +1,77 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 16-02-2018
+// DESCRIPTION: -- Define los estilo para el combo de seleccion
+// AUTHOR: ------- jcastillov (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+@select-option-height:33px;
+
+.bel-select{
+	.bel-select-main(@border-style-default, @border-width-s, @color-medium-gray, @space-s);
+	&-xs {
+		width: @xs;
+	}
+	&-s {
+		width: @s;
+	}
+	&-m {
+		width: @m;
+	}
+	&-l {
+		width: @l;
+	}
+	&-xl {
+		width: @xl;
+	}
+}
+.bel-option-list{
+	.bel-option-list-main();
+	&-xs {
+		width: @xs;
+	}
+	&-s {
+		width: @s;
+	}
+	&-m {
+		width: @m;
+	}
+	&-l {
+		width: @l;
+	}
+	&-xl {
+		width: @xl;
+	}
+}
+
+.bel-display-list{
+	display: block;
+	margin-top: 0px;
+}
+.bel-select-error{
+	.bel-select-state(@color-dark-gray, @color-white);
+	.bel-select-border-buttom(@border-style-default, @border-width-s, @color-bac-red);
+}
+
+.bel-select-default{
+	.bel-select-state(@color-dark-gray, @color-white);
+}
+
+.bel-select-disabled{
+	.bel-select-state(@color-dark-gray, @color-backgrond-gray);
+}
+
+.bel-select-filled{
+	.bel-select-state(@color-black, @color-white);
+}
+
+
+.bel-option{
+	.bel-option-main(@border-style-default, @border-width-s, @color-medium-gray, @space-s, @color-extra-dark-gray);
+}
+.bel-option-disabled{
+	.bel-option-main(@border-style-default, @border-width-s, @color-medium-gray, @space-s, @color-medium-gray);
+	.bel-typography-h(@font-style-secondary, @color-extra-dark-gray, @font-size-l, @font-weight-m);
+	pointer-events:none;
+}

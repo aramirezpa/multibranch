@@ -1,0 +1,27 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 28-02-2018
+// DESCRIPTION: -- funciones para los elementos: Tabs.
+// AUTHOR: ------- avegago, ecalderon.
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+//Define los estilos basicos que pertenecen a los tab en sus 2 estados (activo y des activo)
+.bel-tab-basic () {
+	.bel-reset-style-list();
+  .bel-reset();
+  float: left;
+    border: none;
+  cursor: pointer;
+  border-top: 2px solid;
+  height: 35px;
+  padding-left: @space-m;
+  padding-right: @space-m;
+  margin-right: 2px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.bel-tab-color(@tab-color, @tab-background) {
+	border-top-color: @tab-color;
+	background-color: @tab-background;
+}

@@ -1,0 +1,42 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Define los estilo para text area
+// AUTHOR: ------- jcastillov (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-textarea-main(@textarea-width, @textarea-height, @border-style: @border-style-default, @border-width: @border-width-s, @border-color: @color-black, @padding: @border-width-s){
+	.bel-element-state(@color-white, @color-extra-dark-gray, @border-width-s, @border-style, @border-color);
+	.bel-element-font(@font-style-primary, @font-size-m);
+	width: @textarea-width;
+	height: @textarea-height;
+	transition: border-color 500ms;
+	padding: @padding;
+	box-sizing: border-box;
+	text-align: justify;
+	margin-bottom: @space-xs;
+	&:focus {
+		outline: none;
+	}
+	resize: none;
+}
+
+.bel-textarea-state(@color: @color-black, @background: @color-white){
+	color: @color;
+	background-color: @background;
+}
+
+.bel-textarea-border-buttom(@border-style: solid, @border-width: @border-width-s, @border-color: @color-black){
+	border-bottom: @border-width @border-style @border-color;
+}
+
+.bel-textarea-max-width(@textarea-max-width){
+	max-width: @textarea-max-width;
+}
+
+.bel-textarea-focus(@color: @color-black, @background: @color-white){
+	color:@color;
+	background-color: @background;
+	.bel-textarea-border-buttom(@border-style-default, @border-width-s, @color-extra-dark-gray);
+}

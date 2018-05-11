@@ -1,0 +1,25 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Hacks de estilo para los navegadores
+// AUTHOR: ------- earayaa (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+// Elimina el estilo por defecto de los botones en IE
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+   -webkit-appearance: button; /* for input */
+     -moz-user-select: none;
+      -ms-user-select: none;
+}

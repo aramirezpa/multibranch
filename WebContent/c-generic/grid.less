@@ -1,0 +1,208 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 08-02-2018
+// DESCRIPTION: -- Se dedfine el grid
+// AUTHOR: ------- avegago, earayaa, ecalderon (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+
+//GLOBAL
+// version 1.0
+
+//Crea los contenedores generales y filas de el GRID
+// version 1.0
+.bel-grid-container {
+	position:relative;
+	margin: auto;
+  width: 100%;
+	max-width: @grid-width-fixed;
+	height: auto;
+}
+
+.bel-grid-row {
+ margin: 10px 0px 10px 0px;
+}
+
+[class^="bel-col-"] {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.col() {
+  &-1 {
+    width: (100% / 12);
+  }
+  &-2 {
+    width: (100% / 6);
+  }
+  &-3 {
+    width: (100% / 4);
+  }
+  &-4 {
+    width: (100% / 3);
+  }
+  &-5 {
+    width: (100% / 2.4);
+  }
+  &-6 {
+    width: (100% / 2);
+  }
+  &-7 {
+    width: (100% / 1.714285714285714);
+  }
+  &-8 {
+    width: (100% / 1.5);
+  }
+  &-9 {
+    width: (100% / 1.333333333333333);
+  }
+  &-10 {
+    width: (100% / 1.2);
+  }
+  &-11 {
+    width: (100% / 1.090909090909091);
+  }
+  &-12 {
+    width: 100%;
+  }
+  &-offset-1 {
+    margin-left: (100% / 12);
+  }
+  &-offset-2 {
+    margin-left: (100% / 6);
+  }
+  &-offset-3 {
+    margin-left: (100% / 4);
+  }
+  &-offset-4 {
+    margin-left: (100% / 3);
+  }
+  &-offset-5 {
+    margin-left: (100% / 2.4);
+  }
+  &-offset-6 {
+    margin-left: (100% / 2);
+  }
+  &-offset-7 {
+    margin-left: (100% / 1.714285714285714);
+  }
+  &-offset-8 {
+    margin-left: (100% / 1.5);
+  }
+  &-offset-9 {
+    margin-left: (100% / 1.333333333333333);
+  }
+  &-offset-10 {
+    margin-left: (100% / 1.2);
+  }
+  &-offset-11 {
+    margin-left: (100% / 1.090909090909091);
+  }
+  &-offset-12 {
+    margin-left: 100%;
+  }
+  &-push-1 {
+    left: (100% / 12);
+  }
+  &-push-2 {
+    left: (100% / 6);
+  }
+  &-push-3 {
+    left: (100% / 4);
+  }
+  &-push-4 {
+    left: (100% / 3);
+  }
+  &-push-5 {
+    left: (100% / 2.4);
+  }
+  &-push-6 {
+    left: (100% / 2);
+  }
+  &-push-7 {
+    left: (100% / 1.714285714285714);
+  }
+  &-push-8 {
+    left: (100% / 1.5);
+  }
+  &-push-9 {
+    left: (100% / 1.333333333333333);
+  }
+  &-push-10 {
+    left: (100% / 1.2);
+  }
+  &-push-11 {
+    left: (100% / 1.090909090909091);
+  }
+  &-push-12 {
+    left: 100%;
+  }
+  &-pull-1 {
+    right: (100% / 12);
+  }
+  &-pull-2 {
+    right: (100% / 6);
+  }
+  &-pull-3 {
+    right: (100% / 4);
+  }
+  &-pull-4 {
+    right: (100% / 3);
+  }
+  &-pull-5 {
+    right: (100% / 2.4);
+  }
+  &-pull-6 {
+    right: (100% / 2);
+  }
+  &-pull-7 {
+    right: (100% / 1.714285714285714);
+  }
+  &-pull-8 {
+    right: (100% / 1.5);
+  }
+  &-pull-9 {
+    right: (100% / 1.333333333333333);
+  }
+  &-pull-10 {
+    right: (100% / 1.2);
+  }
+  &-pull-11 {
+    right: (100% / 1.090909090909091);
+  }
+  &-pull-12 {
+    right: 100%;
+  }
+}
+
+.bel-col {
+  .col();
+  &-xs {
+    .col();
+  }
+  .responsive(768px, {
+    &-sm {
+      .col();
+    }
+  });
+  .responsive(992px, {
+    &-md {
+      .col();
+    }
+  });
+  .responsive(1200px, {
+    &-lg {
+      .col();
+    }
+  });
+}

@@ -1,0 +1,49 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 26-02-2018
+// DESCRIPTION: -- Define los estilo para los modales
+// AUTHOR: ------- earayaa (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+@modal-close-btn-size: 24px;
+@modal-s-size: 402px;
+@modal-m-size: 604px;
+@modal-l-size: 740px;
+
+.bel-box-modal {
+  .box-modal();
+}
+
+.bel-modal{
+  .modal-main();
+}
+
+.bel-modal-s{
+  .modal-size(@modal-s-size, @space-m);
+}
+
+.bel-modal-m{
+  .modal-size(@modal-m-size, @space-l);
+}
+
+.bel-modal-l{
+  .modal-size(@modal-l-size, @space-l);
+}
+
+.bel-modal-close-btn {
+  .modal-close-btn(@modal-close-btn-size);
+  border-radius: @border-radius-xxl;
+  color: @color-dark-gray;
+  transition: .5s;
+  position: relative;
+}
+
+.bel-modal-close-btn-cnt{
+  .bel-element-size(100%, @modal-close-btn-size);
+}
+
+.bel-box-hidden{display: none;}
+.bel-box-visible{display: block;}
+.bel-modal-hidden{display: none;}
+.bel-modal-visible{display: block;}

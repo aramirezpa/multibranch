@@ -1,0 +1,82 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 16-02-2018
+// DESCRIPTION: -- Define los estilo para los campos de texto
+// AUTHOR: ------- jcastillo (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+
+.bel-input {
+	.bel-input-main (@border-style-default , @border-width-s , @color-medium-gray , @space-s , @space-s);
+	&-xs {
+		max-width: @xs;
+	}
+
+	&-s {
+		max-width: @s;
+	}
+
+	&-m {
+		max-width: @m;
+	}
+
+	&-l {
+		max-width: @l;
+	}
+
+	&-xl {
+		max-width: @xl;
+	}
+}
+
+.bel-input--icon {
+	.bel-input-main (@border-style-default , @border-width-s , @color-medium-gray , 43px , @space-s);
+	&-xs {
+		max-width: @xs;
+	}
+
+	&-s {
+		max-width: @s;
+	}
+
+	&-m {
+		max-width: @m;
+	}
+
+	&-l {
+		max-width: @l;
+	}
+
+	&-xl {
+		max-width: @xl;
+	}
+}
+
+.bel-input-filled {
+	.bel-input-state (@color-black , @color-white);
+}
+
+.bel-input-error {
+	.bel-input-state (@color-black , @color-white);
+	.bel-input-border-buttom (@border-style-default , @border-width-s , @color-bac-red);
+}
+
+.bel-input-disabled {
+	.bel-input-state (@color-dark-gray , @color-backgrond-gray);
+}
+
+.bel-input-non-editable {
+	.bel-input-state (@color-black , @color-backgrond-gray);
+}
+
+.bel-input-edit {
+	.bel-input-focus (@color-black , @color-white);
+}
+
+.bel-input-search {
+	.bel-input-main (@border-style-default , @border-width-s , @color-medium-gray , @space-s , @space-s);
+	border: none;
+	margin-bottom: 0px;
+}
+

@@ -1,0 +1,48 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 13-02-2018
+// DESCRIPTION: -- Define los estilo para la tipografia
+// AUTHOR: ------- aarroyo, kugaldes, (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+@wizard-margin-li: 1.5px;
+
+
+// Base mixins para la clase bel-wizard
+// version 1.0
+.bel-wizard-base(){
+	height: auto;
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	min-width: 400px;
+	position: relative;
+	vertical-align: middle;
+	padding: 0px;
+}
+
+// Base mixins para la clase bel-wizard-li
+// version 1.0
+.bel-wizard-li-base(){
+    display: inline-block;
+	height: 3px;
+	text-align: center;
+	position: relative;
+	margin-left: @wizard-margin-li;
+	margin-right: @wizard-margin-li;
+}
+
+// Base mixins para la clase bel-wizard-label
+// version 1.0
+.bel-wizard-label-base(){
+    width: 100%;
+	position: absolute;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	align-content: center;
+	text-transform: capitalize;
+	bottom: 10px;
+	font-weight: @font-weight-m;
+}

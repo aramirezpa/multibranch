@@ -1,0 +1,35 @@
+
+@box-modal-full-size: 100%;
+
+.box-modal() {
+    height: @box-modal-full-size;
+    width: @box-modal-full-size;
+    background: @color-black;
+    position: fixed;
+    opacity: 0.9;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.modal-main(){
+  background: @color-white;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.modal-size(@modal-width, @padding){
+  width: @modal-width;
+  padding: @padding;
+}
+
+
+.modal-close-btn(@size) {
+  .bel-element-size(@size, @size);
+  cursor: pointer;
+  float: right;
+}

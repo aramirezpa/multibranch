@@ -1,0 +1,150 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 15-02-2018
+// DESCRIPTION: -- Define los estilo para los botones
+// AUTHOR: ------- earayaa (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+
+// Alto de botón
+@btn-height-m: 20px;
+@btn-height-s: 15px;
+@border-tertiary: 2.3px;
+// Ancho mínimo y máximo de botón
+@btn-width-min: 135px;
+@btn-width-max: 268px;
+
+
+
+//box-shadow
+@box-shadow-btn-primary-active: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+@box-shadow-btn-primary-hover:  0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+
+@box-shadow-btn-default-active: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+@box-shadow-btn-default-hover:  0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+
+@box-shadow-btn-tertiary-active: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+@box-shadow-btn-tertiary-hover:  0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+
+
+@box-shadow-btn-quaternary-active: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+@box-shadow-btn-quaternary-hover:  0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+
+// Elimina el estilo por defecto de los botones
+.bel-btn {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+  -webkit-appearance: button; /* for input */
+  -moz-user-select: none;
+ -ms-user-select: none;
+}
+
+.bel-btn{
+  .button-main();
+  .bel-typography();
+}
+
+.bel-btn-group {
+  .bel-btn {
+    float: right;
+    margin-right: @space-m;
+    &:first-child {
+      margin-right: 0;
+    }
+  }
+  &::after {
+    display: block;
+    clear: both;
+    content: ' ';
+  }
+}
+
+.bel-btn-primary{
+  .button-size(@btn-width-min, @btn-width-max);
+  .button-properties(0 @space-m, @element-height-default);
+}
+
+.bel-btn-primary-active{
+  .button-state(@color-light-blue, @color-white, @border-width-s @border-style-default @color-light-blue, @box-shadow-btn-primary-active);
+}
+
+.bel-btn-primary-disabled{
+  .button-state(@color-light-gray, @color-btn-disabled, @border-width-s @border-style-default @color-light-gray, none);
+}
+
+.bel-btn-default{
+  .button-size(@btn-width-min, @btn-width-max);
+  .button-properties(0 @space-m, @element-height-default);
+}
+
+.bel-btn-default-active{
+  .button-state(@color-white, @color-light-blue, @border-width-s @border-style-default @color-light-blue, @box-shadow-btn-default-active);
+}
+
+.bel-btn-default-disabled{
+  .button-state(@color-white, @color-btn-disabled, @border-width-s @border-style-default @color-btn-disabled, none);
+}
+
+.bel-btn-secondary{
+  .button-size(@btn-width-min, @btn-width-max);
+  .button-properties(0 @space-m, @element-height-default);
+}
+
+.bel-btn-secondary-active{
+  .button-state(none, @color-light-blue, none, none);
+}
+
+.bel-btn-secondary-disabled{
+  .button-state(none, @color-btn-disabled, none, none);
+}
+
+.bel-btn-tertiary{
+  width: 20px;
+  .button-properties(0px, @btn-height-m);
+  border-radius: @border-radius-xxl;
+  position: relative;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .bel-btn-tertiary {
+      padding: 10px;
+    }
+}
+
+.bel-btn-tertiary-active{
+  .button-state(none, @color-bac-red, @border-tertiary @border-style-default @color-bac-red, none);
+  cursor: pointer;
+}
+
+.bel-btn-tertiary-disabled{
+  .button-state(none, @color-btn-disabled, @border-tertiary @border-style-default @color-btn-disabled, none);
+}
+
+.bel-btn-quaternary{
+  min-width: 25px;
+  .button-properties(0 @space-xs, @btn-height-s);
+  .button-typography(@font-style-secondary, @font-size-img-xxs);
+  line-height: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .bel-btn-quaternary {
+      padding: 8px 5px;
+    }
+}
+
+.bel-btn-quaternary-active{
+  .button-state(@color-white, @color-extra-dark-gray, @border-width-s @border-style-default @color-extra-dark-gray, @box-shadow-btn-quaternary-active);
+  cursor: pointer;
+}
+
+.bel-btn-quaternary-disabled{
+  display: none;
+}

@@ -1,0 +1,83 @@
+
+@border-tertiary: 2.3px;
+
+// Typography hover ------------------------------------------------------------
+.bel-typography-link:hover{
+	.bel-typography-a(@font-style-primary, @color-btn-hover, @font-size-m, @reset-text-decoration);
+	cursor: pointer;
+}
+
+// Buttons hover ---------------------------------------------------------------
+.bel-btn-primary-active:hover{
+  .button-state(@color-btn-hover, @color-white, @border-width-s @border-style-default @color-btn-hover, @box-shadow-btn-primary-hover);
+  cursor: pointer;
+}
+
+.bel-btn-default-active:hover{
+  .button-state(@color-white, @color-btn-hover, @border-width-s @border-style-default @color-btn-hover, @box-shadow-btn-default-hover);
+  cursor: pointer;
+}
+
+.bel-btn-secondary-active:hover{
+  .button-state(@color-light-gray, @color-btn-hover, none, none);
+  cursor: pointer;
+}
+
+.bel-btn-tertiary-active:hover{
+	.button-state(@color-bac-red, @color-white, @border-tertiary @border-style-default @color-bac-red, none);
+	cursor: pointer;
+}
+
+.bel-btn-quaternary-active:hover{
+  .button-state(@color-extra-dark-gray, @color-white, @border-width-s @border-style-default @color-extra-dark-gray, @box-shadow-btn-quaternary-active);
+  cursor: pointer;
+}
+// Select hover ---------------------------------------------------------------
+.bel-option:hover{
+	background:@color-backgrond-gray;
+	cursor: pointer;
+}
+
+// Download options hover
+.bel-download-option:hover{
+	color:@color-black;
+	font-weight: @font-weight-m;
+	cursor: pointer;
+}
+
+// Tooltip hover ---------------------------------------------------------------
+.bel-tooltip:hover {
+	background-color: @color-btn-hover;
+	cursor: pointer;
+}
+// Modal hover -----------------------------------------------------------------
+.bel-modal-close-btn:hover,
+.bel-error-validation:hover {
+  color: white;
+  cursor: pointer;
+  background: @color-bac-red;
+}
+
+.bel-preloader-span:nth-child(1) {
+	.bel-preloader-animation(0px,-1s);
+}
+
+.bel-preloader-span:nth-child(2) {
+	.bel-preloader-animation(12px,-0.6s);
+}
+
+.bel-preloader-span:nth-child(3) {
+	.bel-preloader-animation(24px,-0.3s);
+}
+
+// tab -------------------------------------------------------------------------
+.bel-tab-container__bel-tab:last-child {
+	margin-right: 0px;
+}
+
+// Modal search -----------------------------------------------------------------
+
+.bel-search:hover{
+	background:@color-backgrond-gray;
+	cursor: pointer;
+}

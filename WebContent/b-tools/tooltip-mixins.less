@@ -1,0 +1,41 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Define los estilo para el tooltip
+// AUTHOR: ------- aarroyo, kugaldes, (1.0)
+// WORKTEAM: ----- Anonymous-Codebreakers (1.0)
+// version 1.0
+
+
+//tooltip
+@tooltip-width-min: 182px;
+@tooltip-width-max: 248px;
+@tooltip-height-min: 18px;
+@tooltip-height-max: 170px;
+
+// version 1.0
+.bel-tooltip-main(@height: @tooltip-height, @width: @tooltip-width){
+    border-radius: 25px;
+    background-color: @color-light-blue;
+    .bel-element-size(@width, @height);
+    color: @color-white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bel-tooltip-text-main(@margin-left: @tooltip-text-margin-left, @margin-top: @tooltip-text-margin-top){
+	  visibility: hidden;
+    background-color: @color-extra-dark-gray;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    margin-left: @margin-left;
+    min-height: @tooltip-height-min;
+    min-width: @tooltip-width-min;
+    max-height: @tooltip-height-max;
+    max-width: @tooltip-width-max;
+    .bel-element-font(@font-style-primary, @font-size-m);
+    padding: @space-s;
+    margin-top: @margin-top;
+    transition: 0.1s visibility;
+}

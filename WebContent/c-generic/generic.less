@@ -1,0 +1,91 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 12-02-2018
+// DESCRIPTION: -- Clases genericas
+// AUTHOR: ------- jcastillov, earayaa (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+
+ .bel-reset(){
+ 	all: unset;
+ }
+
+.bel-element-size(@width, @height){
+  width: @width;
+  height: @height;
+}
+
+.bel-element-state(@backgrond, @color, @border-width, @border-style, @border-color){
+  background: @backgrond;
+  border: @border-width @border-style @border-color;
+  color: @color;
+}
+
+.bel-element-shadow(@box-shadow){
+  box-shadow: @box-shadow;
+}
+
+.bel-element-font(@font-family, @font-size){
+  font-family: @font-family;
+  font-size: @font-size;
+}
+
+.bel-slider-element-transform(@translate-x){
+	-webkit-transform: translateX(@translate-x);
+  -ms-transform: translateX(@translate-x);
+  transform: translateX(@translate-x);
+}
+
+.bel-slider-element-transform-Y(@translate-y){
+  -webkit-transform: translateY(@translate-y);
+  -ms-transform: translateY(@translate-y);
+  transform: translateY(@translate-y);
+}
+
+.bel-center{
+  margin: 0 auto;
+  width: max-content;
+}
+.bel-reset-style-list(){
+	list-style : none;
+    list-style-image : none;
+    list-style-position : outside;
+    list-style-type : none;
+}
+
+.selection-input-cnt{
+	position: relative;
+}
+
+.selection-input-text{
+	position: relative;
+ 	 margin-left: 5px;
+	.bel-typography-p();
+	 line-height: 0;
+	 display: inline-block;
+	 vertical-align: middle;
+   cursor: pointer;
+}
+
+.bel-hide-element{
+	display: none;
+}
+
+.bel-show-element{
+	display: initial;
+}
+
+button {
+ background: none;
+ border: 0;
+ color: inherit;
+ font: inherit;
+ line-height: normal;
+ overflow: visible;
+ padding: 0;
+ -webkit-user-select: none;
+ -webkit-appearance: button;
+ -moz-user-select: none;
+ -ms-user-select: none;
+}

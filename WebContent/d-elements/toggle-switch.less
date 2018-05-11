@@ -1,0 +1,32 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Define los estilo para los toggle-switch
+// AUTHOR: ------- nruizz,ecalderon (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+@toggle-switch-width: 28;
+.bel-slider {
+ .slider-state(@color-medium-gray);
+}
+
+.bel-switch {
+  position: relative;
+  width: (@toggle-switch-width) * 1px;
+  height: @check-controls-size;
+  float: right;
+}
+.bel-switch-input {display:none;}
+
+.bel-switch-text{
+	position: relative;
+	.bel-typography-p();
+	 display: inline-block;
+	 vertical-align: middle;
+	 top: -4px;
+	 margin-right: 5px;
+	 cursor: pointer;
+}
+.bel-switch-group{
+	width: @m;
+}

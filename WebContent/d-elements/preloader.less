@@ -1,0 +1,46 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 26-02-2018
+// DESCRIPTION: -- Define los estilo para el loading
+// AUTHOR: ------- osotos (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-preloader-bg {
+	.bel-preloader-bg-basic();
+}
+
+.bel-preloader-wrapper{
+	.bel-preloader-wrapper-basic();
+}
+
+.bel-preloader{
+	.bel-preloader-basic();
+}
+
+.bel-preloader-text {
+	.bel-preloader-text-basic();
+	.bel-typography-secondary(@font-family: @font-style-primary, @color: white, @font-size: @font-size-m, @line-height: @line-height-m)
+}
+
+.bel-preloader-span {
+	.bel-preloader-span-basic();
+}
+
+@keyframes bel-preloader {
+	0% {
+		.bel-preloader-animate(12px,0px,@color-bac-red);
+    }
+
+	25% {
+		.bel-preloader-animate(60px,25px,@color-dark-red);
+	}
+
+	50% {
+		.bel-preloader-animate(12px,0px,@color-bac-red);
+	}
+
+	100% {
+		.bel-preloader-animate(12px,0px,@color-bac-red);
+	}
+}

@@ -1,0 +1,39 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 16-02-2018
+// DESCRIPTION: -- Define los mixins para los campos de texto
+// AUTHOR: ------- jcastillov (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-input-main(@border-style, @border-width, @border-color, @padding-rigth, @padding-left){
+	.bel-reset();
+	.bel-element-state(@color-white, @color-extra-dark-gray, @border-width-s, @border-style, @border-color);
+	.bel-element-font(@font-style-primary, @font-size-m);
+	transition: border-color 500ms;
+	padding: 0px @padding-rigth 0px @padding-left;
+	box-sizing: border-box;
+	margin-bottom: @space-xs;
+	height: 40px;
+	width: 100%;
+	&:focus {
+		outline: none;
+	}
+}
+
+.bel-input-state(@color, @background){
+	color: @color;
+	background-color: @background;
+}
+
+.bel-input-border-buttom(@border-style, @border-width, @border-color){
+	border-bottom: @border-width @border-style @border-color;
+}
+
+
+.bel-input-focus(@color, @background){
+	color:@color;
+	background-color: @background;
+	.bel-input-border-buttom(@border-style-default, @border-width-s, @color-extra-dark-gray);
+}
+

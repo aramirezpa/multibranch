@@ -1,0 +1,117 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 24-04-2018
+// DESCRIPTION: -- Define los estilo para el componente de descarga
+// AUTHOR: ------- earaya (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-download-list-container {
+  color:@color-medium-gray;
+  cursor:pointer;
+  text-align:left;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.bel-download-triangle{
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #FFF;
+  top: -14px;
+  left: 44.4%;
+  z-index: 11;
+}
+
+.bel-download-list{
+  display:none;
+  position:relative;
+}
+
+.bel-download-option-list {
+  position: absolute;
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  z-index: 10;
+  border-bottom: @border-width-s @border-style-default @color-medium-gray;
+  border-top: @border-width-s @border-style-default @color-medium-gray;
+  min-width: 135px;
+  max-width: 268px;
+}
+
+.bel-download-list::before{
+  content: "";
+  height: 10px;
+  left: 45%;
+  position: absolute;
+  top: -7px;
+  transform: rotateZ(-45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  width: 10px;
+  border-top: 2px solid #BEBEBE;
+  border-left: 2px solid #BEBEBE;
+}
+
+.bel-select-download-list {
+  all: unset;
+  color: #6d6e71;
+  font-family: Graphik;
+  font-size: 14px;
+}
+
+.bel-select-download-list:hover {
+	color: black;
+}
+
+.bel-send-email-text {
+  all: unset;
+  color: @color-extra-dark-gray;
+  font-family: Graphik;
+  font-size: 14px;
+  cursor:default;
+}
+
+.bel-margin-add-mail-text{
+  margin-left:-55px;
+  padding-top:10px;
+}
+
+.bel-download-options {
+  animation-name: opacityAnimation;
+  animation-duration: 0.8s;
+  opacity: 1;
+}
+
+@keyframes opacityAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.bel-download-option {
+  all: unset;
+  font-family: Graphik;
+  font-size: 14px;
+  padding: 10px;
+  border-left: 1px solid #bebebe;
+  border-right: 1px solid #bebebe;
+  align-items: center;
+  box-sizing: border-box;
+  display: block;
+  background: #fff;
+  color: #4d4d4f;
+  width: 100%;
+}
+
+.bel-download-open{
+  color: black;
+}
+
+

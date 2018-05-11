@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+<link rel="stylesheet" href="g-libreries/fonts/1704-PLVMUK.css">
+<link rel="stylesheet" href="bel-main-style.css">
+</head>
+<body>
+
+<html>
+  <head>
+  </head>
+<html>
+  <head>
+    <div class="bel-grid-container">
+      <div class="bel-grid-row">
+        <div class="bel-col-12">
+          <div class="bel-table-container">
+		  <table style="width:100%">
+  <tr>
+  <h2>Table Caption</h2>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+		  
+		  
+		  </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+</html>
+
+
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		//input
+		$(".bel-input-non-editable").prop("readonly", true);
+
+		$(".bel-input").on('click', function() {
+			if (!$(this).hasClass('bel-input-error')) {
+				$(this).addClass('bel-input-edit');
+			}
+			if ($(this).hasClass('bel-input-non-editable')) {
+				$(this).removeClass('bel-input-edit');
+			}
+		});
+
+		$('.bel-input').blur(function() {
+			$(this).removeClass('bel-input-edit');
+		});
+
+		//textarea
+
+		$(".bel-textarea").on('click', function() {
+			if (!$(this).hasClass('bel-textarea-error')) {
+				$(this).addClass('bel-textarea-edit');
+			}
+		});
+
+		$('.bel-textarea').blur(function() {
+			$(this).removeClass('bel-textarea-edit');
+		});
+
+		var tx = document.getElementsByTagName('textarea');
+		for (var i = 0; i < tx.length; i++) {
+			tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight)
+					+ 'px;');
+			tx[i].addEventListener("input", OnInput, false);
+		}
+
+		function OnInput(e) {
+			this.style.height = 'auto';
+			this.style.height = (this.scrollHeight) + 'px';
+		}
+
+		//select
+		function updateBelSelect(idList, idLabel, optionText, element) {
+			document.getElementById(idLabel).innerHTML = optionText;
+			$("#" + idLabel).addClass("bel-select-filled");
+			$("#" + idList).removeClass("bel-display-list");
+			$("#" + idLabel).removeClass('bel-select-open-icon');
+			$("#" + idLabel).addClass('bel-select-close-icon');
+			var allOptions = $("#" + idList).children('li');
+			allOptions.removeClass('selected');
+			$(element).addClass('selected');
+		}
+
+		function displayBelOption(idList, idLabel) {
+			if ($('#' + idLabel).hasClass('bel-select-open-icon')) {
+				$("#" + idLabel).removeClass('bel-select-open-icon');
+				$("#" + idLabel).addClass('bel-select-close-icon');
+				$("#" + idList).removeClass("bel-display-list");
+			} else {
+				var allOptions = $(".bel-option-list");
+				allOptions.removeClass('bel-display-list');
+
+				var allSelectLabels = $(".bel-select");
+				allSelectLabels.removeClass('bel-select-open-icon');
+				allSelectLabels.addClass('bel-select-close-icon');
+
+				if (!$('#' + idLabel).hasClass('bel-select-disabled')) {
+					var allOptions = $("#" + idList).children('li');
+					allOptions.removeClass('selected');
+					$('#' + idList).toggleClass('bel-display-list');
+					$("#" + idLabel).addClass('bel-select-open-icon');
+				}
+			}
+		}
+
+		function getBelSelectedOption(id) {
+			alert($("#" + id).find(".selected").val());
+		}
+	</script>
+</body>
+</html>

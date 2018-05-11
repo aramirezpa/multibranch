@@ -1,0 +1,47 @@
+
+//oculta el contenido por defecto
+.bel-tab-container__bel-tab-content {
+    display: none;
+    float:left\0;
+    position: absolute;
+    top: 50px;
+ }
+ //Contiene el tab y el resultado
+.bel-tab-container{
+  display: inline-grid;
+  position: relative;
+  width: 100%;
+}
+
+.bel-tab-container__bel-tab-a{
+.bel-reset();
+color: inherit; /* blue colors for links too */
+text-decoration: inherit; /* no underline */
+cursor: pointer;
+line-height: 35px;
+}
+
+.bel-tab-container__bel-tab-ul{
+	.bel-reset();
+	margin: 0px;
+	padding:0px;
+  position: relative;
+}
+
+//llama al metodo utilizando los datos por defecto del mismo
+.bel-tab-container__bel-tab{
+    .bel-tab-basic();
+}
+//llama al metodo con ciertos parametros espesificos para cuando esta activo
+
+.tab-selected{
+  .bel-tab-color(@color-bac-red,@color-white);
+  font-family: @font-style-primary;
+  font-weight: @font-weight-m;
+  font-size: @font-size-m;
+}
+
+.tab-unselected{
+.bel-tab-color(@color-tab-secondary,@color-tab-secondary);
+	.bel-typography-secondary(@font-style-primary, @color-extra-dark-gray, @font-size-m, @line-height-m);
+}

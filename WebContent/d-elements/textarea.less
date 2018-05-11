@@ -1,0 +1,48 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 19-02-2018
+// DESCRIPTION: -- Define los mixins para los text area
+// AUTHOR: ------- jcastillov (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+
+@textarea-height: 80px;
+@textarea-width: 100%;
+
+.bel-textarea{
+	.bel-textarea-main(@textarea-width, @textarea-height, @border-style-default, @border-width-s, @color-medium-gray, @space-s);
+}
+
+.bel-textarea-filled{
+	.bel-textarea-state(@color-black, @color-white);
+}
+
+.bel-textarea-error{
+	.bel-textarea-state(@color-black, @color-white);
+	.bel-textarea-border-buttom(@border-style-default, @border-width-s, @color-bac-red);
+}
+
+.bel-textarea-xs{
+	.bel-textarea-max-width(@form-element-size-xs);
+}
+
+.bel-textarea-s{
+	.bel-textarea-max-width(@form-element-size-s);
+}
+
+.bel-textarea-m{
+	.bel-textarea-max-width(@form-element-size-m);
+}
+
+.bel-textarea-l{
+	.bel-textarea-max-width(@form-element-size-l);
+}
+
+.bel-textarea-xl{
+	.bel-textarea-max-width(@form-element-size-xl);
+}
+
+.bel-textarea-edit{
+	.bel-textarea-focus(@color-black, @color-white);
+}

@@ -1,0 +1,68 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 12-02-2018
+// DESCRIPTION: -- Define los estilo para la animacion timer
+// AUTHOR: ------- jcastillov, avegago (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-timer-cont__timer{
+  height: 50px; 
+  width: 50px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.bel-timer-cont__seconds-label{
+	margin-top:2px;
+}
+
+.bel-timer-cont__circle{
+  stroke-dasharray: 440; 
+  stroke-dashoffset: 300;
+  transition: all 1s linear;
+  stroke-width: 3;
+  fill:none;
+  cy:25;
+  cx:25;
+  r:20;
+  stroke:@color-bac-red;
+}
+.bel-timer-cont__shadow{
+  stroke-dasharray: 440; 
+  stroke-dashoffset: 300;
+  fill:none;
+  cy:25;
+  cx:25;
+  r:20;
+  stroke:@color-medium-gray;
+}
+.bel-timer-cont__numbers{   
+    position: absolute;
+    width: 50px;
+   	width: 100%\9;
+    text-align: center;
+    top: 14px;
+    .bel-typography-h3();
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.bel-timer-cont__numbers{   
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 14px;
+    .bel-typography-h3();
+}
+}
+
+.bel-timer-cont__label {
+    width: 50px;
+    .bel-typography-caption();
+    text-align: center;
+}
+
+.bel-timer-cont{
+	position:relative;
+	text-align:center;
+}

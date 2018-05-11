@@ -1,0 +1,20 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 23-02-2018
+// DESCRIPTION: -- Define los estilos para las listas ordenadas y no ordenadas
+// AUTHOR: ------- aramirez
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-list{
+	.bel-reset();
+	.bel-typography-default(@font-style-primary, @color-extra-dark-gray,@font-size-s);
+	list-style-type: none;
+	margin-left: 0;
+	padding-right: 0;
+}
+
+.bel-list__ordered-li{
+  counter-increment: list;
+  position: relative;
+}

@@ -1,0 +1,32 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 12-02-2018
+// DESCRIPTION: -- Define los estilo para los checkbox
+// AUTHOR: ------- jcastrom, aramirez (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.checbox-button-input {
+	display: none;
+}
+
+.checkbox-button-icon {
+	&::before {
+    .checkbox-button-main;
+    .checkbox-button-state(@color-white,  @border-width-s @border-style-default @color-medium-gray);
+    transition: .5s;
+		text-align: center;
+		line-height: 1.2;
+		font-size: @font-size-m;
+		color: @color-white;
+	}
+		position: relative;
+		cursor: pointer;
+	box-sizing: border-box;
+	font-family: Graphik;
+}
+
+.checkbox-button-text {
+	display: inline-block;
+	vertical-align: middle;
+}

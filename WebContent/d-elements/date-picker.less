@@ -1,0 +1,56 @@
+.Zebra_DatePicker * {
+    padding: 0;
+}
+
+.Zebra_DatePicker * {
+    box-sizing: content-box !important;
+}
+
+.Zebra_DatePicker {
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px #ccc;
+    color: #222;
+    padding: 3px 3px;
+    position: absolute;
+    display: table;
+    width: 255px;
+    z-index: 1200;
+    .bel-typography-secondary(@font-style-primary, @color-extra-dark-gray, @font-size-m, @line-height-m);
+}
+
+.Zebra_DatePicker table {
+    border-collapse: collapse;
+    border-radius: 4px;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.Zebra_DatePicker th,
+.Zebra_DatePicker td {
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    min-width: 25px;
+    width: 25px;
+}
+
+button.Zebra_DatePicker_Icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    line-height: 0;
+    padding: 0;
+    position: absolute;
+    width: 16px;
+    color: @color-medium-gray;
+    margin-top: -3px;
+    -webkit-transform: translate(-50%,-50%) !important;
+    transform: translate(-50%,-50%) !important;
+    right: 0px !important;
+    top: 50% !important;
+}

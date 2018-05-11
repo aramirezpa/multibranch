@@ -1,0 +1,45 @@
+<div id="box-modal" class="bel-box-modal">
+		<div id="modal" class="bel-modal bel-modal-m">
+			<div class="bel-modal-close-btn-cnt bel-space-bottom-m">
+				<div class="bel-modal-close-btn bel-modal-close-item" onclick="closeModal('box-modal','modal');"></div>
+			</div>
+			<div class="bel-grid-container">
+				<div class="bel-grid-row bel-space-bottom-l">
+					<div class="bel-col-7 bel-download-list-container">
+						<label class="bel-icon-email bel-send-email-text">Enviar notificación de transferencia</label>
+					</div>
+				</div>
+				<div class="bel-grid-row">
+					<div class="bel-col-7">
+						<label class="bel-typography bel-typography-label bel-space-bottom-s">Correo electrónico</label>
+					</div>
+				</div>
+				<div class="bel-grid-row">
+					<div class="bel-col-7">
+						<input id="belInputEmailId" 
+						class='bel-input--icon bel-input--icon-m bel-input-default'
+						type="text" name="" value="" placeholder="Ingrese un correo electrónico">
+						<div id="belMoreEmailsContId">
+						</div>
+					</div>
+					<div class="bel-col-4 bel-space-top-s">
+						<a class="bel-typography bel-typography-link bel-margin-add-mail-text" onclick="belAddNewEmail('belInputEmailId','belMoreEmailsContId',3);">Agregar otro correo</a>
+					</div>
+				</div>
+				<div class="bel-grid-row bel-space-bottom-l">
+					<div class="bel-col-7">
+						<input
+						class='bel-input--icon bel-input--icon-m bel-input-default bel-input-non-editable'
+						type="text" name="" value="correcliente@mail.com" placeholder="Placeholder"><span
+						class="bel-error-validation bel-error-validation-item" onclick="belDeleteEmailCont(this)"></span>
+					</div>
+				</div>
+
+				<div class="bel-grid-row bel-space-left-xl bel-space-bottom-l">
+					<div class="bel-col-offset-8 bel-col-4">
+						<button class="bel-btn bel-btn-primary bel-btn-primary-active">Aceptar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

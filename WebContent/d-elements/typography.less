@@ -1,0 +1,39 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 13-02-2018
+// DESCRIPTION: -- Tipografia de los elementos
+// AUTHOR: ------- aarroyo, kugaldes, (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-typography{
+	.bel-typography-main(@font-style-primary, @color-extra-dark-gray, @font-size-m);
+}
+.bel-typography-h1{
+	.bel-typography-h(@font-style-primary, @color-black, @font-size-xxl, @font-weight-s);
+}
+.bel-typography-h2{
+	.bel-typography-h(@font-style-primary, @color-black, @font-size-xl, @font-weight-s);
+}
+.bel-typography-h3{
+	.bel-typography-h(@font-style-secondary, @color-extra-dark-gray, @font-size-l, @font-weight-m);
+}
+.bel-typography-p{
+	.bel-typography-secondary(@font-style-primary, @color-extra-dark-gray, @font-size-m, @line-height-m);
+}
+.bel-typography-label{
+	.bel-typography-l(@font-style-secondary, @color-extra-dark-gray, @font-size-s);
+}
+.bel-typography-caption{
+	.bel-typography-secondary(@font-style-primary, @color-black, @font-size-xs, @line-height-m);
+}
+
+.bel-typography-link{
+	.bel-typography-a(@font-style-primary, @color-light-blue, @font-size-m, @reset-text-decoration);
+}
+.bel-typography-label-error{
+	.bel-typography-secondary(@font-style-secondary, @color-bac-red, @font-size-xs, @line-height-m);
+	font-weight: @font-weight-m;
+	display: block;
+}
+

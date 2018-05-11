@@ -1,0 +1,24 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 12-02-2018
+// DESCRIPTION: -- Define los estilo para los radio buttons
+// AUTHOR: ------- earayaa (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+// Define las propiedades por defecto de los radio buttons
+
+
+.radio-button-main(){
+	.bel-reset();
+	height: @check-controls-size;
+	width: @check-controls-size;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: @border-radius-xl;
+}
+
+.radio-button-state(@background, @border-width, @border-style, @border-color){
+	border: @border-width @border-style @border-color;
+	background: @background;
+}

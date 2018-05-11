@@ -1,0 +1,91 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 26-02-2018
+// DESCRIPTION: -- Elemento tooltip
+// AUTHOR: ------- aarroyo, (1.0)
+// WORKTEAM: ----- Anonymous-Codebreakers (1.0)
+// version 1.0
+
+// wizard-steps
+@wizard-steps-1: 100%;
+@wizard-steps-2: 49%;
+@wizard-steps-3: 32%;
+@wizard-steps-4: 24%;
+@wizard-steps-5: 19%;
+@wizard-steps-6: 16%;
+
+.bel-wizard {
+
+	.bel-wizard-base();
+
+	&-steps-1 {
+		width: @wizard-steps-1;
+	}
+	&-steps-2 {
+		width: @wizard-steps-2;
+	}
+	&-steps-3 {
+		width: @wizard-steps-3;
+	}
+	&-steps-4 {
+		width: @wizard-steps-4;
+	}
+	&-steps-5 {
+		width: @wizard-steps-5;
+	}
+	&-steps-6 {
+		width: @wizard-steps-6;
+	}
+}
+
+.bel-wizard-li {
+	.bel-wizard-li-base();
+}
+
+.bel-wizard-step {
+	&-active {
+		background-color: @color-medium-gray;
+	}
+	&-inactive {
+		background-color: @color-medium-gray;
+	}
+	&-completed {
+		background-color: @color-medium-green;
+	}
+	&-actual {
+		background-color:  @color-medium-gray;
+	}
+}
+
+.bel-wizard-label {
+	.bel-wizard-label-base();
+
+	.bel-typography-default (@font-style-primary , @color-black , @font-size-m);
+
+	&-active {
+		color: @color-dark-gray;
+		font-weight: @font-weight-s;
+	}
+
+	&-inactive {
+		color: @color-dark-gray;
+		font-weight: @font-weight-s;
+	}
+}
+
+.bel-wizard-label-actual{
+	color: @color-black;
+	font-weight: @font-weight-m;
+	animation-name: colorAnimation;
+	animation-duration: 0.8s;
+}
+
+@keyframes widthAnimation {
+    from {width: 1%;}
+    to {width: 100%;}
+}
+
+@keyframes colorAnimation {
+    from {color: @color-dark-gray;}
+    to {color: @color-black;}
+}

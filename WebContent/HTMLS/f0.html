@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="g-libreries/fonts/1704-PLVMUK.css">
+    <link rel="stylesheet" href="bel-main-style.css">
+
+     <script src="g-libreries/jquery/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="resources/bel-js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="resources/bel-js/bel-main-scripts.js"></script>
+
+
+
+    <script type="text/javascript" src="g-libreries/zebra/js/zebra_datepicker.min.js"></script>
+
+    <script>
+   messagesStep = [];
+   messagesStep.push('uno');
+   messagesStep.push('dos');
+   messagesStep.push('tres');
+   messagesStep.push('cuatro');
+   messagesStep.push('cinco');
+   messagesStep.push('seis');
+   $(document).ready(function(){
+      $('#idProcess').belCreateWizardProcessStep(5, messagesStep, 2);
+   });
+</script>
+
+
+
+
+  </head>
+  <body>
+  
+
+    <link rel="stylesheet" href="https://rawgit.com/vochy023/b-lue/master/bel-main-style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://rawgit.com/vochy023/b-lue/master/bel-main-scripts.js"></script>
+    <script>
+      $( document ).ready(function() {
+        $( "#tabs" ).makeTabs("tabs-1");
+      });
+    </script>
+
+
+  <div class="bel-grid-container">
+  <div class="bel-grid-row">
+    <div class="bel-grid-col-4">
+
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Nunc tincidunt</a></li>
+      <li><a href="#tabs-2">Proin dolor</a></li>
+    </ul>
+
+    <div id="tabs-1">
+      <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus.</p>
+    </div>
+    <div id="tabs-2">
+      <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante.</p>
+    </div>
+  </div>
+    <br><br><br><br><br>
+   </div>
+  </div>
+  </div>
+
+
+  </body>
+</html>

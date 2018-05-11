@@ -1,0 +1,64 @@
+// REVISION ------ 1.0
+// SP: ----------- CRI-025171
+// DATE: --------- 26-02-2018
+// DESCRIPTION: -- Define los estilo para el loading
+// AUTHOR: ------- osotos (1.0)
+// WORKTEAM: ----- Codebreakers-Anonymous (1.0)
+// version 1.0
+
+.bel-preloader-bg-basic () {
+	background-color: rgba(0,0,0,0.90);
+    .bel-element-size(100%,100%);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+// Define las propiedes basicas de la clase pre-loader-wrapper
+.bel-preloader-wrapper-basic () {
+    .bel-reset();
+    .bel-element-size(100%,auto);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Define las propiedes basicas de la clase pre-loader
+.bel-preloader-basic () {
+    .bel-reset();
+    position:relative;
+    height: 12px;
+    width: 36px;
+}
+
+.bel-preloader-text-basic () {
+    color: @color-white;
+	text-align: center;
+	line-height: 20px;
+	margin-top: 30px;
+}
+
+.bel-preloader-span-basic () {
+    .bel-element-size(12px,12px);
+ 	display:block;
+	bottom:0px;
+	background: @color-bac-red;
+	position:absolute;
+	animation: bel-preloader 1.5s  infinite ease-in-out;
+    
+}
+
+.bel-preloader-animation(@left-size,@animation-delay) {
+	left:@left-size;
+	animation-delay: @animation-delay;
+}
+
+.bel-preloader-animate(@height-size,@transform-y,@background-color) {
+	height:@height-size;
+    .bel-slider-element-transform-Y(@transform-y);
+    background: @background-color;
+}

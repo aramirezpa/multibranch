@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo</title>
+<link rel="stylesheet" href="g-libreries/fonts/1704-PLVMUK.css">
+<link rel="stylesheet" href="bel-main-style.css">
+<script>
+
+function belShowResultsContent(myInput, myContent) {
+    var input, resultCont;
+    input = document.getElementById(myInput);
+    resultCont = document.getElementById(myContent);
+    if(input.value==""){
+    	resultCont.classList.add("bel-hide-element");
+    }else{
+    	resultCont.classList.remove("bel-hide-element");
+    }
+}
+
+
+
+</script>
+</head>
+<body>
+<!--
+
+<style>
+.class-color {
+	background: #e4002b;
+	text-align: center;
+}
+
+.grid {
+	text-align: center;
+	height: 1000px;
+	background: white;
+	background: lightgray;
+	font-size: 22px;
+	color: gray;
+}
+.gridContainer{
+	    margin: auto;
+    width: 100%;
+    max-width: 948px;
+    height: auto;
+    position: absolute;
+}
+
+</style>
+
+	<div class="gridContainer">
+		<div class="bel-grid-row" style="z-index: -1">
+			<div class="bel-col-1 grid">1</div>
+			<div class="bel-col-1 grid">2</div>
+			<div class="bel-col-1 grid">3</div>
+			<div class="bel-col-1 grid">4</div>
+			<div class="bel-col-1 grid">5</div>
+			<div class="bel-col-1 grid">6</div>
+			<div class="bel-col-1 grid">7</div>
+			<div class="bel-col-1 grid">8</div>
+			<div class="bel-col-1 grid">9</div>
+			<div class="bel-col-1 grid">10</div>
+			<div class="bel-col-1 grid">11</div>
+			<div class="bel-col-1 grid">12</div>
+		</div> //border: 1px solid black;
+	</div>
+-->
+
+	<div class="bel-grid-container">
+		<div class="bel-grid-row">
+			<div class="bel-grid-col-4">
+				<span class="bel-icon-search-xs bel-search-icon-position"></span> 
+				<input onkeyup="belShowResultsContent('myInput', 'myContent')" id="myInput" class="bel-input-search bel-search__input" type="text" name="" value="" placeholder="¿Qué desea solicitar?">
+				<div id="myContent" class="bel-search__results-list bel-hide-element">
+					<ul id= "myUL" class="bel-list">				
+						<li class="bel-search__results"><span class="bel-search__results-item-icon-m creditcard-icon"></span><a class="bel-search__results-item_category" href="#">Tarjetas de Crédito</a></li>
+						<li class="bel-search__item"><a class= "bel-search__results-item" href="#">Solicitar Tarjetas de Crédito</a></li>
+						<li class="bel-search__item"><a class= "bel-search__results-item" href="#">Actualice su Correo Electrónico para Estados de Cuenta</a></li>
+						<li class="bel-search__item"><a class= "bel-search__results-item" href="#">Aumente su Límite de Crédito</a></li>
+						
+						<li class="bel-search__results"><span class="bel-search__results-item-icon-m account-icon"></span><a class="bel-search__results-item_category" href="#">Otros</a></li>					
+						<li class="bel-search__item"><a class= "bel-search__results-item" href="#">Solicitud de Afiliación de Comercio</a></li>
+						
+						<li class="bel-search__results"><span class="bel-search__results-item-icon-m account-icon"></span><a class="bel-search__results-item_category" href="#">Préstamos y Créditos</a></li>					
+						<li class="bel-search__item"><a class= "bel-search__results-item" href="#">Solicitud de Préstamo de Auto</a></li>
+						<li class="bel-search__item"><a class= "bel-search__results-item" href="#">Solicitud de Préstamo</a></li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		//input
+		$(".bel-input-non-editable").prop("readonly", true);
+
+		$(".bel-input").on('click', function() {
+			if (!$(this).hasClass('bel-input-error')) {
+				$(this).addClass('bel-input-edit');
+			}
+			if ($(this).hasClass('bel-input-non-editable')) {
+				$(this).removeClass('bel-input-edit');
+			}
+		});
+
+		$('.bel-input').blur(function() {
+			$(this).removeClass('bel-input-edit');
+		});
+
+		//textarea
+
+		$(".bel-textarea").on('click', function() {
+			if (!$(this).hasClass('bel-textarea-error')) {
+				$(this).addClass('bel-textarea-edit');
+			}
+		});
+
+		$('.bel-textarea').blur(function() {
+			$(this).removeClass('bel-textarea-edit');
+		});
+
+		var tx = document.getElementsByTagName('textarea');
+		for (var i = 0; i < tx.length; i++) {
+			tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight)
+					+ 'px;');
+			tx[i].addEventListener("input", OnInput, false);
+		}
+
+		function OnInput(e) {
+			this.style.height = 'auto';
+			this.style.height = (this.scrollHeight) + 'px';
+		}
+
+		//select
+		function updateBelSelect(idList, idLabel, optionText, element) {
+			document.getElementById(idLabel).innerHTML = optionText;
+			$("#" + idLabel).addClass("bel-select-filled");
+			$("#" + idList).removeClass("bel-display-list");
+			$("#" + idLabel).removeClass('bel-select-open-icon');
+			$("#" + idLabel).addClass('bel-select-close-icon');
+			var allOptions = $("#" + idList).children('li');
+			allOptions.removeClass('selected');
+			$(element).addClass('selected');
+		}
+
+		function displayBelOption(idList, idLabel) {
+			if ($('#' + idLabel).hasClass('bel-select-open-icon')) {
+				$("#" + idLabel).removeClass('bel-select-open-icon');
+				$("#" + idLabel).addClass('bel-select-close-icon');
+				$("#" + idList).removeClass("bel-display-list");
+			} else {
+				var allOptions = $(".bel-option-list");
+				allOptions.removeClass('bel-display-list');
+
+				var allSelectLabels = $(".bel-select");
+				allSelectLabels.removeClass('bel-select-open-icon');
+				allSelectLabels.addClass('bel-select-close-icon');
+
+				if (!$('#' + idLabel).hasClass('bel-select-disabled')) {
+					var allOptions = $("#" + idList).children('li');
+					allOptions.removeClass('selected');
+					$('#' + idList).toggleClass('bel-display-list');
+					$("#" + idLabel).addClass('bel-select-open-icon');
+				}
+			}
+		}
+
+		
+		var List = document.querySelector('#myUL');
+	    for (var p = 1; p <= List.children.length -1; p++) {
+	    	if(List.children[p].classList.contains('bel-search__results')){
+	    		List.children[p].classList.add("bel-space-top-s");
+	    	}
+	    	
+	        
+	    }
+		
+	</script>
+</body>
+</html>
